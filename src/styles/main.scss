@@ -1,12 +1,12 @@
-@use 'normalize.css';
-@use 'base/variables';
-@use 'base/grid';
-@use 'base/typography';
-@use 'components/buttons';
-@use 'components/combobox';
-@use 'layout/header';
-@use 'layout/form';
-@use 'layout/content';
+@use "normalize.css";
+@use "base/variables";
+@use "base/grid";
+@use "base/typography";
+@use "components/buttons";
+@use "components/combobox";
+@use "layout/hero";
+@use "layout/form";
+@use "layout/content";
 
 body {
   font-family: "Montserrat", sans-serif;

@@ -1,0 +1,37 @@
+.hero {
+  min-height: 100vh;
+  padding: var(--spacing-xl);
+
+  > .logo {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  > .title {
+    color: var(--color-white);
+    margin: 0 0 var(--spacing-md);
+  }
+
+  &:before {
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: no-repeat top center / 100%
+      url("../images/hero/mobile/mobile-leaves.png");
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: no-repeat center bottom 5% / 90%
+      url("../images/hero/mobile/mobile-plantperson.png") var(--thertiary-color);
+    z-index: -2;
+  }
+}
