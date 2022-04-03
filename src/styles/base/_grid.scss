@@ -1,0 +1,18 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+.column {
+	--columns: 12; /* Number of columns in the grid system */
+	--width: 0; /* Default width of the element */
+
+	flex-basis: calc(var(--width) / var(--columns) * 100%);
+}
+
+/*
+  https://css-tricks.com/responsive-designs-and-css-custom-properties-building-a-flexible-grid-system/
+  https://css-tricks.com/responsive-designs-and-css-custom-properties-defining-variables-and-breakpoints/
+*/

@@ -1,0 +1,15 @@
+.font {
+  font-family: var(--base-font);
+
+  &-light {
+    font-weight: 300;
+  }
+
+  &-bold {
+    font-weight: 700;
+  }
+
+  &-semi-bold {
+    font-weight: 600;
+  }
+}

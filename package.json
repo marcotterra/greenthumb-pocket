@@ -8,7 +8,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
   "devDependencies": {
     "sass": "^1.49.11",
     "vite": "^2.9.1"
