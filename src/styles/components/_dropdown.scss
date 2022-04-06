@@ -1,0 +1,12 @@
+.dropdown {
+  padding: 10px 20px;
+  border: 1px solid var(--color-gray-3);
+  border-radius: 19px;
+  appearance: none;
+  position: relative;
+  color: var(--color-gray-3);
+  font-weight: 300;
+  background-image: url("../images/icons/dropdown-arrow.svg");
+  background-position: center right 16px;
+  background-repeat: no-repeat;
+}
