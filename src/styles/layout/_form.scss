@@ -1,0 +1,37 @@
+.question-form {
+  background-color: var(--color-white);
+  border: 1px solid black;
+  padding: var(--spacing-md) var(--spacing-xl) var(--spacing-xl);
+  font-size: var(--font-size-md);
+
+  > .question-list {
+    color: var(--color-gray-5);
+    margin-block-start: 0;
+    margin-block-end: 1em;
+    padding-inline-start: 0;
+    padding-inline-end: 40px;
+    list-style: none;
+    counter-reset: li;
+  }
+
+  > .question-list .question-item {
+    counter-increment: li;
+    padding-top: 90px;
+    position: relative;
+
+    &:before {
+      content: counter(li) ".";
+      font-weight: bold;
+    }
+
+    &:not(:first-child) {
+      margin-top: var(--spacing-xl);
+    }
+
+    .item-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}

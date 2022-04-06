@@ -1,5 +1,6 @@
 .hero {
-  min-height: 100vh;
+  //TODO: fix this
+  min-height: calc(100vh - var(--spacing-xl) * 2);
   padding: var(--spacing-xl);
 
   > .logo {
