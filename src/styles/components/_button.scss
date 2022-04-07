@@ -1,0 +1,19 @@
+.button {
+  padding: 0 var(--spacing-lg);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: baseline;
+  height: 50px;
+
+  :first-child {
+    margin-right: var(--spacing-md);
+  }
+
+  &.full {
+    width: 100%;
+  }
+}
