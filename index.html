@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <header class="hero">
+    <header class="hero" id="hero">
       <img
         src="./src/images/icons/logo-white.svg"
         width="164"
@@ -46,8 +46,15 @@
             Set the amount of <strong>sunlight</strong> your plant will get.
           </span>
 
-          <select class="dropdown item-option">
-            <option>Select...</option>
+          <select
+            name="sun"
+            title="How much sunlight do you have?"
+            class="dropdown item-option"
+          >
+            <option value="">Select...</option>
+            <option value="no">No</option>
+            <option value="low">Low</option>
+            <option value="high">Hight</option>
           </select>
         </li>
 
@@ -64,8 +71,15 @@
             How often do you want to <strong>water</strong> your plant?
           </span>
 
-          <select class="dropdown item-option">
-            <option>Select...</option>
+          <select
+            name="water"
+            title="How often do you want to water your plant?"
+            class="dropdown item-option"
+          >
+            <option value="">Select...</option>
+            <option value="regularly">Regularly</option>
+            <option value="daily">Daily</option>
+            <option value="rarely">Rarely</option>
           </select>
         </li>
 
@@ -82,15 +96,21 @@
             Do you have pets? Do they <strong>chew</strong> plants?
           </span>
 
-          <select class="dropdown item-option">
-            <option>Select...</option>
+          <select
+            name="pets"
+            title="Does your pets chew plants ?"
+            class="dropdown item-option"
+          >
+            <option value="">Select...</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
           </select>
         </li>
       </ol>
     </section>
 
     <main class="content">
-      <div class="nocontent-container hidden">
+      <div class="nocontent-container">
         <h1 class="title font-size-xl">No results yet...</h1>
 
         <p class="info">
@@ -106,7 +126,7 @@
         />
       </div>
 
-      <div class="suggestions-container">
+      <div class="suggestions-container hidden">
         <div class="suggestion-header">
           <img
             src="./src/images/illustrations/pick.png"
@@ -118,61 +138,13 @@
           <h1>Our picks for you</h1>
         </div>
 
-        <div class="suggestion-content">
-          <div class="card">
-            <div class="badge">✨ Staff favorite</div>
-            <img
-              src="./src/images/plants/bunny-ears-cacti.jpg"
-              alt=""
-              class="image"
-            />
-            <div class="footer">
-              <span class="title">Bunny ears cacti</span>
-              <span class="price">25</span>
-              <div class="icons">
-                <img src="./src/images/icons/pet.svg" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="badge">✨ Staff favorite</div>
-            <img
-              src="./src/images/plants/bunny-ears-cacti.jpg"
-              alt=""
-              class="image"
-            />
-            <div class="footer">
-              <span class="title">Bunny ears cacti</span>
-              <span class="price">25</span>
-              <div class="icons">
-                <img src="./src/images/icons/pet.svg" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="badge">✨ Staff favorite</div>
-            <img
-              src="./src/images/plants/bunny-ears-cacti.jpg"
-              alt=""
-              class="image"
-            />
-            <div class="footer">
-              <span class="title">Bunny ears cacti</span>
-              <span class="price">25</span>
-              <div class="icons">
-                <img src="./src/images/icons/pet.svg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="suggestion-content"></div>
 
         <div class="suggestion-footer">
-          <button class="button full">
+          <a class="button full" href="#hero">
             <img src="./src/images/icons/arrow-up.svg" alt="back to the top" />
             back to the top
-          </button>
+          </a>
         </div>
       </div>
     </main>

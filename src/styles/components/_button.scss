@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  vertical-align: baseline;
   height: 50px;
 
   :first-child {
@@ -16,4 +15,9 @@
   &.full {
     width: 100%;
   }
+}
+
+a.button {
+  padding: 0;
+  text-decoration: none;
 }

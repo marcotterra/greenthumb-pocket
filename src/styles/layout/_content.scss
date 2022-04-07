@@ -6,10 +6,7 @@
     flex-direction: column;
     align-items: center;
     color: var(--color-gray-4);
-
-    &.hidden {
-      display: none;
-    }
+    padding: var(--spacing-xl);
 
     .title {
       font-weight: bold;
