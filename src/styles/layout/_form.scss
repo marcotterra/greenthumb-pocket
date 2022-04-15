@@ -1,44 +1,80 @@
 .question-form {
   background-color: var(--color-white);
-  padding: var(--spacing-md) var(--spacing-xl) var(--spacing-xl);
   font-size: var(--font-size-md);
 
-  > .question-list {
+  &__container {
+    padding: var(--spacing-md) var(--spacing-xl) var(--spacing-xl);
+  }
+
+  &__list {
+    --width: 12;
     color: var(--color-gray-5);
     list-style: none;
     counter-reset: li;
     margin-block: 0;
     padding-inline: 0;
+
+    &-item {
+      counter-increment: li;
+      padding-top: 90px;
+      position: relative;
+
+      &:before {
+        content: counter(li) ".";
+        font-weight: bold;
+      }
+
+      &:not(:first-child) {
+        margin-top: var(--spacing-xl);
+      }
+
+      &__image {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      &__content {
+        padding-right: 40px;
+      }
+
+      &__option {
+        margin: var(--spacing-lg) 0;
+        width: 100%;
+      }
+    }
   }
+}
 
-  > .question-list .question-item {
-    counter-increment: li;
-    padding-top: 90px;
-    position: relative;
-
-    &:before {
-      content: counter(li) ".";
-      font-weight: bold;
+@media screen and (min-width: 768px) {
+  .question-form {
+    &__container {
+      padding-top: calc(var(--spacing-xl) * 1.8);
+      padding-bottom: calc(var(--spacing-xl) * 1.6);
     }
 
-    &:not(:first-child) {
-      margin-top: var(--spacing-xl);
-    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      margin-top: var(--spacing-lg) 0;
 
-    .item-image {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+      &-item {
+        max-width: 219px;
 
-    .item-content {
-      // TODO: fix this padding
-      padding-right: 40px;
-    }
+        &:not(:first-child) {
+          margin-top: initial;
+        }
 
-    .item-option {
-      margin: var(--spacing-lg) 0;
-      width: 100%;
+        &__content {
+          padding-right: initial;
+        }
+
+        &__option {
+          margin: initial;
+          margin: var(--spacing-lg) 0 0 0;
+          width: 100%;
+        }
+      }
     }
   }
 }

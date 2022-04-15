@@ -45,84 +45,86 @@
     </header>
 
     <section class="question-form">
-      <ol class="question-list">
-        <li class="question-item">
-          <img
-            src="./src/images/illustrations/sun.png"
-            width="75"
-            height="75"
-            alt="Sun"
-            class="item-image"
-          />
+      <div class="question-form__container container">
+        <ol class="question-form__list column">
+          <li class="question-form__list-item">
+            <img
+              src="./src/images/illustrations/sun.png"
+              width="75"
+              height="75"
+              alt="Sun"
+              class="question-form__list-item__image"
+            />
 
-          <span class="item-content">
-            Set the amount of <strong>sunlight</strong> your plant will get.
-          </span>
+            <span class="question-form__list-item__content">
+              Set the amount of <strong>sunlight</strong> your plant will get.
+            </span>
 
-          <select
-            name="sun"
-            title="How much sunlight do you have?"
-            class="dropdown item-option"
-            autocomplete="off"
-          >
-            <option value="" select>Select...</option>
-            <option value="no">No</option>
-            <option value="low">Low</option>
-            <option value="high">High</option>
-          </select>
-        </li>
+            <select
+              name="sun"
+              title="How much sunlight do you have?"
+              class="dropdown question-form__list-item__option"
+              autocomplete="off"
+            >
+              <option value="" select>Select...</option>
+              <option value="no">No</option>
+              <option value="low">Low</option>
+              <option value="high">High</option>
+            </select>
+          </li>
 
-        <li class="question-item">
-          <img
-            src="./src/images/illustrations/wateringcan.png"
-            width="103"
-            height="75"
-            alt="Wateringcan"
-            class="item-image"
-          />
+          <li class="question-form__list-item">
+            <img
+              src="./src/images/illustrations/wateringcan.png"
+              width="103"
+              height="75"
+              alt="Wateringcan"
+              class="question-form__list-item__image"
+            />
 
-          <span class="item-content">
-            How often do you want to <strong>water</strong> your plant?
-          </span>
+            <span class="question-form__list-item__content">
+              How often do you want to <strong>water</strong> your plant?
+            </span>
 
-          <select
-            name="water"
-            title="How often do you want to water your plant?"
-            class="dropdown item-option"
-            autocomplete="off"
-          >
-            <option value="" selected>Select...</option>
-            <option value="regularly">Regularly</option>
-            <option value="daily">Daily</option>
-            <option value="rarely">Rarely</option>
-          </select>
-        </li>
+            <select
+              name="water"
+              title="How often do you want to water your plant?"
+              class="dropdown question-form__list-item__option"
+              autocomplete="off"
+            >
+              <option value="" selected>Select...</option>
+              <option value="regularly">Regularly</option>
+              <option value="daily">Daily</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </li>
 
-        <li class="question-item">
-          <img
-            src="./src/images/illustrations/dog.png"
-            width="88"
-            height="75"
-            alt="Dog"
-            class="item-image"
-          />
+          <li class="question-form__list-item">
+            <img
+              src="./src/images/illustrations/dog.png"
+              width="88"
+              height="75"
+              alt="Dog"
+              class="question-form__list-item__image"
+            />
 
-          <span class="item-content">
-            Do you have pets? Do they <strong>chew</strong> plants?
-          </span>
+            <span class="question-form__list-item__content">
+              Do you have pets? Do they <strong>chew</strong> plants?
+            </span>
 
-          <select
-            name="pets"
-            title="Does your pets chew plants ?"
-            class="dropdown item-option"
-            autocomplete="off"
-          >
-            <option value="" select>Select...</option>
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-          </select>
-        </li>
-      </ol>
+            <select
+              name="pets"
+              title="Does your pets chew plants ?"
+              class="dropdown question-form__list-item__option"
+              autocomplete="off"
+            >
+              <option value="" select>Select...</option>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </li>
+        </ol>
+      </div>
     </section>
 
     <main class="content">
