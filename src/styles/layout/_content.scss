@@ -28,7 +28,7 @@
     .suggestion-content {
       display: flex;
       flex-wrap: nowrap;
-      overflow: scroll;
+      overflow-x: scroll;
       padding-left: var(--spacing-xl);
       padding-left: 28px;
       padding-bottom: 62px;

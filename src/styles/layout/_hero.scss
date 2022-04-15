@@ -1,15 +1,32 @@
 .hero {
-  //TODO: fix this
-  min-height: calc(100vh - var(--spacing-xl) * 2);
-  padding: var(--spacing-xl);
+  height: 100vh;
 
-  > .logo {
+  &__container {
+    padding: var(--spacing-xl);
+  }
+
+  &__logo {
     margin-bottom: var(--spacing-xl);
   }
 
-  > .title {
+  &__title {
     color: var(--color-white);
     margin: 0 0 var(--spacing-md);
+    font-size: 40px;
+    line-height: 49px;
+    font-weight: 700;
+  }
+
+  &__person {
+    display: none;
+  }
+
+  &__left-side {
+    --width: 12;
+  }
+
+  &__right-side {
+    --width: 0;
   }
 
   &:before {
@@ -24,7 +41,7 @@
     z-index: -1;
   }
 
-  &::after {
+  &:after {
     content: "";
     left: 0;
     bottom: 0;
@@ -32,7 +49,68 @@
     width: 100%;
     position: absolute;
     background: no-repeat center bottom 5% / 90%
-      url("../images/hero/mobile/mobile-plantperson.png") var(--thertiary-color);
-    z-index: -2;
+      url("../images/hero/mobile/mobile-plantperson.png");
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 500px;
+
+    &__container {
+      padding: var(--spacing-xl) 0;
+      z-index: 2;
+    }
+
+    &__logo {
+      width: 210px;
+      height: 25px;
+    }
+
+    &__title {
+      font-size: 70px;
+      line-height: 85px;
+      width: 400px;
+      margin-bottom: var(--spacing-xl);
+    }
+
+    &__person {
+      display: block;
+      width: 100%;
+      max-height: 428px;
+    }
+
+    &__left-side {
+      --width: 7;
+    }
+
+    &__right-side {
+      --width: 4;
+    }
+
+    &:before {
+      content: "";
+      top: 0;
+      left: 0;
+      height: 500px;
+      width: 862px;
+      position: absolute;
+      background: no-repeat left center / 100%
+        url("../images/hero/desktop/left-leaves.png");
+    }
+
+    &::after {
+      content: "";
+      top: 0;
+      right: 0;
+      left: initial;
+      bottom: initial;
+      height: 500px;
+      width: 361px;
+      position: absolute;
+      background: no-repeat center bottom / 100%
+        url("../images/hero/desktop/right-leaves.png");
+    }
   }
 }

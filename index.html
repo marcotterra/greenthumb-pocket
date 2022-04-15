@@ -9,26 +9,39 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/styles/main.scss" />
+    <meta name="theme-color" content="#15573f" />
   </head>
 
   <body>
     <header class="hero" id="hero">
-      <img
-        src="./src/images/icons/logo-white.svg"
-        width="164"
-        height="20"
-        alt="Logo Green thumb"
-        class="logo"
-      />
+      <div class="hero__container container">
+        <div class="hero__left-side column">
+          <img
+            src="./src/images/icons/logo-white.svg"
+            width="164"
+            height="20"
+            alt="Logo Green thumb"
+            class="hero__logo"
+          />
 
-      <h1 class="title font-size-lg">Find your next green friend</h1>
+          <h1 class="hero__title">Find your next green friend</h1>
 
-      <img
-        src="./src/images/icons/arrow.svg"
-        width="35"
-        height="39"
-        alt="Arrow down"
-      />
+          <img
+            src="./src/images/icons/arrow.svg"
+            width="35"
+            height="39"
+            alt="Arrow down"
+          />
+        </div>
+
+        <div class="hero__right-side column">
+          <img
+            src="./src/images/hero/desktop/plantperson.png"
+            alt="Person"
+            class="hero__person"
+          />
+        </div>
+      </div>
     </header>
 
     <section class="question-form">
@@ -50,11 +63,12 @@
             name="sun"
             title="How much sunlight do you have?"
             class="dropdown item-option"
+            autocomplete="off"
           >
-            <option value="">Select...</option>
+            <option value="" select>Select...</option>
             <option value="no">No</option>
             <option value="low">Low</option>
-            <option value="high">Hight</option>
+            <option value="high">High</option>
           </select>
         </li>
 
@@ -75,8 +89,9 @@
             name="water"
             title="How often do you want to water your plant?"
             class="dropdown item-option"
+            autocomplete="off"
           >
-            <option value="">Select...</option>
+            <option value="" selected>Select...</option>
             <option value="regularly">Regularly</option>
             <option value="daily">Daily</option>
             <option value="rarely">Rarely</option>
@@ -100,8 +115,9 @@
             name="pets"
             title="Does your pets chew plants ?"
             class="dropdown item-option"
+            autocomplete="off"
           >
-            <option value="">Select...</option>
+            <option value="" select>Select...</option>
             <option value="true">Yes</option>
             <option value="false">No</option>
           </select>

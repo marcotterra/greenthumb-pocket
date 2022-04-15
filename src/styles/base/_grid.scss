@@ -2,7 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 960px;
+
+  @media screen and (min-width: 1224px) {
+    max-width: 940px;
+  }
+
+  @media only screen and (min-width: 1824px) {
+    max-width: 1100px;
+  }
 }
 
 .column {
