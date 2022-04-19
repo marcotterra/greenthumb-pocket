@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Greenthumb - Find your next green friend</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <meta name="theme-color" content="#15573f" />
+    <script type="module" crossorigin src="/assets/index.4f237311.js"></script>
+    <link rel="stylesheet" href="/assets/index.019806f5.css">
+  </head>
+
+  <body>
+    <header class="hero" id="hero">
+      <div class="hero__container container">
+        <div class="hero__left-side column">
+          <img
+            src="/assets/logo-white.0a996254.svg"
+            width="164"
+            height="20"
+            alt="Logo Green thumb"
+            class="hero__logo"
+          />
+
+          <h1 class="hero__title">Find your next green friend</h1>
+
+          <img
+            src="/assets/arrow.60a86216.svg"
+            width="35"
+            height="39"
+            alt="Arrow down"
+          />
+        </div>
+
+        <div class="hero__right-side column">
+          <img
+            src="/assets/plantperson.17feb028.png"
+            alt="Person"
+            class="hero__person"
+          />
+        </div>
+      </div>
+    </header>
+
+    <section class="question-form">
+      <div class="question-form__container container">
+        <ol class="question-form__list column">
+          <li class="question-form__list-item">
+            <img
+              src="/assets/sun.fc622ea7.png"
+              width="75"
+              height="75"
+              alt="Sun"
+              class="question-form__list-item__image"
+            />
+
+            <span class="question-form__list-item__content">
+              Set the amount of <strong>sunlight</strong> your plant will get.
+            </span>
+
+            <select
+              name="sun"
+              title="How much sunlight do you have?"
+              class="dropdown question-form__list-item__option"
+              autocomplete="off"
+            >
+              <option value="" select>Select...</option>
+              <option value="no">No</option>
+              <option value="low">Low</option>
+              <option value="high">High</option>
+            </select>
+          </li>
+
+          <li class="question-form__list-item">
+            <img
+              src="/assets/wateringcan.59684700.png"
+              width="103"
+              height="75"
+              alt="Wateringcan"
+              class="question-form__list-item__image"
+            />
+
+            <span class="question-form__list-item__content">
+              How often do you want to <strong>water</strong> your plant?
+            </span>
+
+            <select
+              name="water"
+              title="How often do you want to water your plant?"
+              class="dropdown question-form__list-item__option"
+              autocomplete="off"
+            >
+              <option value="" selected>Select...</option>
+              <option value="regularly">Regularly</option>
+              <option value="daily">Daily</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </li>
+
+          <li class="question-form__list-item">
+            <img
+              src="/assets/dog.3ed00649.png"
+              width="88"
+              height="75"
+              alt="Dog"
+              class="question-form__list-item__image"
+            />
+
+            <span class="question-form__list-item__content">
+              Do you have pets? Do they <strong>chew</strong> plants?
+            </span>
+
+            <select
+              name="pets"
+              title="Does your pets chew plants ?"
+              class="dropdown question-form__list-item__option"
+              autocomplete="off"
+            >
+              <option value="" select>Select...</option>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <main class="content">
+      <div class="content__nocontent container">
+        <div class="content__nocontent__leftside column">
+          <h1 class="content__nocontent__title font-size-xl">
+            No results yet...
+          </h1>
+
+          <p class="content__nocontent__info">
+            Use the filters above to find the plant that best fits your
+            environment :)
+          </p>
+        </div>
+
+        <div class="content__nocontent__rightside column">
+          <img
+            src="/assets/no-results.e2e60b90.png"
+            alt="No results"
+            width="86"
+            height="166"
+          />
+        </div>
+      </div>
+
+      <div class="content__sugestions container hidden">
+        <div class="content__sugestions__header column">
+          <img
+            src="/assets/pick.38039817.png"
+            width="146"
+            height="72"
+            alt="Pick a pet"
+          />
+
+          <h2 class="content__sugestions__header-title">Our picks for you</h2>
+        </div>
+
+        <div class="content__sugestions__content column">
+          <div class="content__sugestions__content__container"></div>
+        </div>
+
+        <div class="content__sugestions__footer column">
+          <a class="button full" href="#hero">
+            <img src="/assets/arrow-up.5b8555a0.svg" alt="back to the top" />
+            back to the top
+          </a>
+        </div>
+      </div>
+    </main>
+
+    
+  </body>
+</html>
