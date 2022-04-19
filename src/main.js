@@ -1,91 +1,23 @@
-import fetcher from "./fetcher";
-
-function createCard(suggestion) {
-  const classes = suggestion?.staff_favorite
-    ? {
-        containerClass:
-          "content__sugestions__content__container-item--favourite",
-        cardClass: "favourite",
-        badge: '<div class="badge">✨ Staff favorite</div>',
-      }
-    : {
-        containerClass: "",
-        cardClass: "",
-        badge: "",
-      };
-
-  const generateTag = (key = "", value = "") => {
-    const assets = {
-      toxicity: {
-        yes: "toxic.svg",
-        no: "pet.svg",
-      },
-      sun: {
-        high: "low-sun.svg",
-        low: "low-sun.svg",
-        no: "no-sun.svg",
-      },
-      water: {
-        rarely: "1-drop.svg",
-        regularly: "2-drops.svg",
-        daily: "3-drops.svg",
-      },
-    };
-
-    let filename = "";
-
-    if (key === "toxicity") {
-      filename = value ? assets.toxicity.yes : assets.toxicity.no;
-    } else {
-      filename = assets[key][value];
-    }
-
-    return `<img src="${"./src/images/icons/" + filename}" />`;
-  };
-
-  const keys = ["toxicity", "water", "sun"];
-
-  const icons = keys //
-    .map((key) => generateTag(key, suggestion[key]))
-    .join("");
-
-  const element = `
-    <div class="content__sugestions__content__container-item column ${classes.containerClass}">
-      <div class="card ${classes.cardClass}" style="flex-grow: 1">
-        ${classes.badge}
-        <img
-          src="${suggestion.url}"
-          alt="${suggestion.name}"
-          class="image"
-        />
-        <div class="footer container">
-          <h3 class="title column">${suggestion.name}</h3>
-          <div class="details column">
-            <span class="price">${suggestion.price}</span>
-            <div class="icons">
-              ${icons}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-
-  return element;
-}
+import fetcher from "./js/fetcher";
+import { generateSuggestionCard, smoothScroll } from "./js/helpers";
 
 function main() {
+  // elements
   const sunInput = document.querySelector("[name=sun]");
   const waterInput = document.querySelector("[name=water]");
   const petInput = document.querySelector("[name=pets]");
+  const scrollButton = document.querySelector("a.button");
+  const noContentContainer = document.querySelector(".content__nocontent");
   const suggestionContainer = document.querySelector(".content__sugestions");
   const suggestionContainerContent = document.querySelector(
     ".content__sugestions__content__container"
   );
-  const noContentContainer = document.querySelector(".content__nocontent");
+
+  const selectedValues = {};
+  const inputElements = [sunInput, waterInput, petInput];
 
   // fetch data
-  async function handleFetchData(options) {
+  async function handleFetchData(options = {}) {
     const shouldFetch = Object.values(options).every((value) => !!value);
 
     if (!shouldFetch) return null;
@@ -111,23 +43,34 @@ function main() {
 
     suggestionContainerContent.innerHTML = data
       .sort((item) => (item?.staff_favorite ? -1 : 1))
-      .map((item) => createCard(item))
+      .map((item) => generateSuggestionCard(item))
       .join("");
   }
 
-  // form handler
-  const options = {};
-  const inputs = [sunInput, waterInput, petInput];
+  function handleInputOptionChange(selectedValuesRef = {}) {
+    return async ({ target }) => {
+      selectedValuesRef[target.name] =
+        target.options[target.selectedIndex].value;
 
-  inputs.forEach((element) => {
-    options[element.name] = null;
-
-    element.addEventListener("change", async ({ target }) => {
-      options[element.name] = target.options[target.selectedIndex].value;
-
-      const data = await handleFetchData(options);
+      const data = await handleFetchData(selectedValuesRef);
       handleUpdateView(data ?? []);
-    });
+    };
+  }
+
+  function handleScrollClick(event) {
+    event.preventDefault();
+
+    smoothScroll(event.target);
+  }
+
+  // scroll to top button
+  scrollButton.addEventListener("click", handleScrollClick);
+
+  // form handler
+  inputElements.forEach((element) => {
+    selectedValues[element.name] = null;
+
+    element.addEventListener("change", handleInputOptionChange(selectedValues));
   });
 }
 
