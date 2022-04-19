@@ -15,6 +15,14 @@
   box-sizing: border-box;
 }
 
+// reset
+h1,
+h2,
+h3 {
+  margin-block: 0;
+  margin-inline: 0;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--thertiary-color);

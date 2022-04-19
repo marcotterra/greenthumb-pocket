@@ -128,24 +128,30 @@
     </section>
 
     <main class="content">
-      <div class="nocontent-container">
-        <h1 class="title font-size-xl">No results yet...</h1>
+      <div class="content__nocontent container">
+        <div class="content__nocontent__leftside column">
+          <h1 class="content__nocontent__title font-size-xl">
+            No results yet...
+          </h1>
 
-        <p class="info">
-          Use the filters above to find the plant that best fits your
-          environment :)
-        </p>
+          <p class="content__nocontent__info">
+            Use the filters above to find the plant that best fits your
+            environment :)
+          </p>
+        </div>
 
-        <img
-          src="./src/images/illustrations/no-results.png"
-          alt="No results"
-          width="86"
-          height="166"
-        />
+        <div class="content__nocontent__rightside column">
+          <img
+            src="./src/images/illustrations/no-results.png"
+            alt="No results"
+            width="86"
+            height="166"
+          />
+        </div>
       </div>
 
-      <div class="suggestions-container hidden">
-        <div class="suggestion-header">
+      <div class="content__sugestions container hidden">
+        <div class="content__sugestions__header column">
           <img
             src="./src/images/illustrations/pick.png"
             width="146"
@@ -153,12 +159,14 @@
             alt="Pick a pet"
           />
 
-          <h1>Our picks for you</h1>
+          <h2 class="content__sugestions__header-title">Our picks for you</h2>
         </div>
 
-        <div class="suggestion-content"></div>
+        <div class="content__sugestions__content column">
+          <div class="content__sugestions__content__container"></div>
+        </div>
 
-        <div class="suggestion-footer">
+        <div class="content__sugestions__footer column">
           <a class="button full" href="#hero">
             <img src="./src/images/icons/arrow-up.svg" alt="back to the top" />
             back to the top

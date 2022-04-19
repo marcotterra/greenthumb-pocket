@@ -4,35 +4,8 @@
   box-shadow: 0px 28px 38px rgba(0, 0, 0, 0.0925754);
   border-radius: 5px;
   position: relative;
-  min-width: 258px;
   display: flex;
   flex-direction: column;
-
-  > .footer {
-    .title {
-      color: var(--color-green-3);
-      font-size: var(--base-font-size);
-      font-weight: bold;
-      line-height: 28px;
-      display: block;
-    }
-
-    .price {
-      color: var(--color-green-3);
-      font-size: var(--base-font-size);
-      font-weight: bold;
-      line-height: 28px;
-      display: inline-block;
-
-      &::before {
-        content: "$";
-      }
-    }
-
-    .icons {
-      float: right;
-    }
-  }
 
   > .badge {
     left: 0;
@@ -52,5 +25,113 @@
     height: 188px;
     width: 100%;
     object-fit: contain;
+  }
+
+  > .footer {
+    margin: 0;
+
+    .title {
+      --width: 12;
+      color: var(--color-green-3);
+      font-size: var(--base-font-size);
+      font-weight: bold;
+      line-height: 28px;
+    }
+
+    .details {
+      --width: 12;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .price {
+        color: var(--color-green-3);
+        font-size: var(--base-font-size);
+        font-weight: bold;
+        line-height: 28px;
+        display: inline-block;
+
+        &::before {
+          content: "$";
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 12px 20px 12px 20px;
+    display: flex;
+    box-shadow: initial;
+
+    > .image {
+      height: 143px;
+      margin-bottom: 10px;
+    }
+
+    > .footer {
+      margin: auto 0 0 0;
+
+      .title {
+        --width: 12;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 5px;
+      }
+    }
+
+    > .footer .details {
+      --width: 12;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .price {
+      }
+
+      .icons :not(:first-child) {
+        margin-left: var(--spacing-sm);
+      }
+    }
+
+    &.favourite {
+      > .image {
+        height: 353px;
+      }
+
+      > .footer .title {
+        --width: 6;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 37px;
+      }
+
+      > .footer .details {
+        --width: 6;
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        align-items: flex-end;
+
+        .price {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+          margin-bottom: 16px;
+        }
+
+        .icons {
+          :not(:first-child) {
+            margin-left: var(--spacing-md);
+          }
+
+          img {
+            height: 25px;
+          }
+        }
+      }
+    }
   }
 }
