@@ -1,18 +1,26 @@
+import toxic from "../images/icons/toxic.svg";
+import pet from "../images/icons/pet.svg";
+import lowSun from "../images/icons/low-sun.svg";
+import noSun from "../images/icons/no-sun.svg";
+import oneDrop from "../images/icons/1-drop.svg";
+import twoDrops from "../images/icons/2-drops.svg";
+import threeDrops from "../images/icons/3-drops.svg";
+
 function generateIconElement(key = "", value = "") {
   const assets = {
     toxicity: {
-      yes: "toxic.svg",
-      no: "pet.svg",
+      yes: toxic,
+      no: pet,
     },
     sun: {
-      high: "low-sun.svg",
-      low: "low-sun.svg",
-      no: "no-sun.svg",
+      high: lowSun,
+      low: lowSun,
+      no: noSun,
     },
     water: {
-      rarely: "1-drop.svg",
-      regularly: "2-drops.svg",
-      daily: "3-drops.svg",
+      rarely: oneDrop,
+      regularly: twoDrops,
+      daily: threeDrops,
     },
   };
 
@@ -24,7 +32,7 @@ function generateIconElement(key = "", value = "") {
     filename = assets[key][value];
   }
 
-  return `<img src="${"./src/images/icons/" + filename}" />`;
+  return `<img src="${filename}" />`;
 }
 
 function generateSuggestionCard(suggestion) {

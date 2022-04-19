@@ -1,5 +1,5 @@
-import fetcher from "./js/fetcher";
-import { generateSuggestionCard, smoothScroll } from "./js/helpers";
+import fetcher from "./fetcher";
+import { generateSuggestionCard, smoothScroll } from "./helpers";
 
 function main() {
   // elements

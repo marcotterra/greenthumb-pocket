@@ -51,9 +51,13 @@
         line-height: 28px;
         display: inline-block;
 
-        &::before {
+        &:before {
           content: "$";
         }
+      }
+
+      .icons :not(:first-child) {
+        margin-left: var(--spacing-sm);
       }
     }
   }
@@ -88,9 +92,6 @@
       justify-content: space-between;
       align-items: center;
 
-      .price {
-      }
-
       .icons :not(:first-child) {
         margin-left: var(--spacing-sm);
       }
@@ -122,13 +123,11 @@
           margin-bottom: 16px;
         }
 
-        .icons {
-          :not(:first-child) {
-            margin-left: var(--spacing-md);
-          }
+        .icons img {
+          height: 25px;
 
-          img {
-            height: 25px;
+          &:not(:first-child) {
+            margin-left: var(--spacing-md);
           }
         }
       }
