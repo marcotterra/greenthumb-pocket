@@ -2,3 +2,6 @@ node_modules
 *.lock
 .cache
 dist
+.env
+
+.DS_Store

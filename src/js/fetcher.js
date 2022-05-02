@@ -1,8 +1,8 @@
-const API_URL = "https://front-br-challenges.web.app/api/v2/green-thumb/";
-
 async function fetcher(options = {}) {
   try {
-    const url = new URL(API_URL);
+    const { VITE_API_URL } = import.meta.env;
+
+    const url = new URL(VITE_API_URL);
 
     Object.entries(options) //
       .forEach(([key, value]) => {
