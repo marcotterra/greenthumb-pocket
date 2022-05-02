@@ -20,7 +20,7 @@ async function fetcher(options = {}) {
 
     return response.json();
   } catch (error) {
-    console.error(error);
+    console.error("Fetch error", error);
 
     return null;
   }
