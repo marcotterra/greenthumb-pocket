@@ -55,7 +55,7 @@ function generateSuggestionCard(suggestion) {
     .map((key) => generateIconElement(key, suggestion[key]))
     .join("");
 
-  const element = `
+  const element = /* jsx */ `
     <div class="content__sugestions__content__container-item column ${classes.containerClass}">
       <div class="card ${classes.cardClass}" style="flex-grow: 1">
         ${classes.badge}
